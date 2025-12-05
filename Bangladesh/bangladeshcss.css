@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    font-family: "Momo Trust Display", sans-serif;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#site-logo {
+
+    transition: 0.3s ease;
+    width: 90px;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+
+#visit-section {
+    margin-top: 8px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#country-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+#country-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+
+.footer {
+    background: #0055ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #site-title a {
+        font-size: 2rem;
+    }
+
+    #site-logo {
+        width: 100px;
+    }
+
+    #visit-section {
+        margin-left: 90px;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    #site-title a {
+        font-size: 1.7rem;
+    }
+
+    #site-logo {
+        width: 80px;
+    }
+
+}
+/*content css*/
+#mainheading{
+  font-family:monospace;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: bolder;
+  font-style: oblique;
+}
+#bangladesh-places {
+ display: flex;
+  align-items: center;
+    gap: 2.5em;
+    justify-content: center;
+    flex-direction: column;
+   
+    margin-top: 30px;
+}
+.destination-card {
+    width:80% ;
+    text-align: center;
+   
+}
+.destination-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  
+  
+}
+
+.destination-card a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+
+}
+.destination-card a:hover{
+  color:blue;
+}
+
+@media (max-width: 768px) {
+#mainheading{
+  text-align: center;
+  font-size: 2.3em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+    /* Make cards go down in column */
+    #bangladesh-places {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .destination-card {
+        width: 90%; 
+        margin-left: 1em;  /* full width on mobile */
+    }
+    .destination-card a{
+      font-size: 1em;
+    }
+
+
+  
+}
+
+/*for description page bangladesh*/
+#bangladesh > h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-family: "Momo Trust Display", sans-serif;
+}
+
+
+
+/* DESCRIPTION SECTION */
+#bangladesh {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: "Noto Serif KR", serif;
+}
+.description {
+    width: 55%;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.description h2, 
+.description h3 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.description ul {
+    padding-left: 20px;
+}
+
+.description ul li {
+    margin-bottom: 8px;
+}
+.content img{
+  width:80%;
+  border-radius: 20px;
+  margin-left: 8em;
+}
+@media (max-width: 768px) {
+
+    /* Main page heading */
+    #mainheading {
+        font-size: 2em;
+        text-align: center;
+        line-height: 1.2;
+        
+    }
+
+    /* Destination cards layout */
+    #bangladesh-places {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        width: 100%;
+    }
+
+    .destination-card {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .destination-card a {
+        font-size: em;
+    }
+
+    /* Bangladesh description page */
+    #bangladesh > h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Text description block */
+    .description {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 10px;
+    }
+
+    /* Image */
+    .content img {
+        width: 100%;
+        border-radius: 1em;
+        margin: 0;
+    }
+    .description p,
+.description ul,
+.description li {
+    text-align: justify;
+}
+
+}
