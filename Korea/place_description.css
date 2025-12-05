@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    font-family: "Momo Trust Display", sans-serif;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#site-logo {
+
+    transition: 0.3s ease;
+    width: 90px;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+
+#visit-section {
+    margin-top: 8px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#country-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+#country-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+
+.footer {
+    background: #0055ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #site-title a {
+        font-size: 2rem;
+    }
+
+    #site-logo {
+        width: 100px;
+    }
+
+    #visit-section {
+        margin-left: 90px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    #site-title a {
+        font-size: 1.7rem;
+    }
+
+    #site-logo {
+        width: 80px;
+    }
+
+}
+
+/*content*/
+#h1jeju {
+
+    font-family: "Momo Trust Display", sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-size: larger;
+
+
+}
+
+#sideimg {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#sideimg img {
+    width: 400px;
+    height: auto;
+    border-radius: 3px;
+    margin: 1em 1em 1em 2em;
+
+}
+
+#sideimg p {
+    padding: .5em;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', sans-serif;
+    text-align: justify;
+    margin: .5em;
+    margin-right: 2em;
+
+}
+
+
+#secondparagraph {
+    margin: .5em 2em .5em 2em;
+    text-align: justify;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.2em;
+
+}
+
+
+#otherimgs img {
+    width: 580px;
+    height: auto;
+    margin: 1em .7em 1em 1.5em;
+    border-radius: 1rem;
+}
+
+@media(max-width:786px) {
+
+    #h1jeju {
+
+        font-family: "Momo Trust Display", sans-serif;
+        text-align: center;
+        font-style: oblique;
+        font-size: larger;
+        margin: .5em 2em .5em 2em;
+
+    }
+
+    #sideimg {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    #sideimg img {
+        width: 350px;
+
+        height: auto;
+        border-radius: 3px;
+        margin: 0 2em .5em 2em;
+
+    }
+
+    #sideimg p {
+        font-size: .95em;
+        /* normal readable text */
+        padding: 0.5em;
+        text-align: justify;
+        margin: .5em 2em .5em 2em;
+    }
+
+    #secondparagraph {
+        margin: .5em 2em .5em 2em;
+        text-align: justify;
+        font-family: 'Gill Sans', sans-serif;
+        font-size: medium;
+
+
+    }
+
+    #otherimgs img {
+        width: 350px;
+        height: auto;
+        border-radius: 3px;
+        margin: 0 .5em .5em 2  em;
+    }
+}

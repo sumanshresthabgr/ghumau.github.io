@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    font-family: "Momo Trust Display", sans-serif;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#site-logo {
+
+    transition: 0.3s ease;
+    width: 90px;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+
+#visit-section {
+    margin-top: 8px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#country-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+}
+
+#country-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+
+.footer {
+    background: #0055ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #site-title a {
+        font-size: 2rem;
+    }
+
+    #site-logo {
+        width: 100px;
+    }
+
+    #visit-section {
+        margin-left: 90px;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    #site-title a {
+        font-size: 1.7rem;
+    }
+
+    #site-logo {
+        width: 80px;
+    }
+
+}
+
+
+/* Content*/
+#main-content {
+    
+    padding: 20px 40px;
+    color: #0b090a;
+}
+
+/* Title */
+.top-places {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font: bold 80px sans-serif;
+    color: rgb(3, 57, 23);
+}
+
+/* Places grid */
+.places-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Each item */
+.places-n {
+    text-align: center;
+    
+    font-size: 30px;
+}
+
+/* Images */
+.place-img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.places-n a{
+    text-decoration: none;
+}
+
+.places-n a:hover {
+    color: orangered;
+}
+
+/* Mobile responsive */
+@media (max-width: 769px) {
+
+    .places-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .place-img {
+        max-width: 320px;
+        height: auto;
+        
+        border-radius: 10px;
+    }
+
+    .top-places {
+        font-size: 2em;
+    }
+    .places-n a{
+        font-size:.8em;
+    }
+}

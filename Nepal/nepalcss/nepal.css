@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- NAVBAR STRUCTURE (Remains Horizontal Always) --- */
+#navbar {
+    font-family: "Momo Trust Display", sans-serif; 
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between; /* Header on left, Visit on right */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#site-logo {
+    width: 90px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* --- VISIT SECTION (Main Container) --- */
+#visit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    padding-right: 20px;
+}
+
+#visit-section fieldset {
+    border: 1px solid white; 
+    padding: 5px;
+}
+
+#visit-title {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* 🏔️ DESKTOP LAYOUT (Default): Two Columns/Two Rows */
+#country-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    max-width: 250px; 
+    height: 60px; /* Forces wrap onto two rows */
+    align-content: flex-start; 
+}
+
+#country-list li {
+    margin: 5px 8px; 
+    width: 40%; /* Sets up two columns */
+}
+
+#country-list a {
+    display: block; 
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* --- MAIN CONTENT STYLES --- */
+.header {
+    background: #a30000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 25px;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                 url('../../Photos//nepalimage/nepalback.jpg') center/cover no-repeat fixed; 
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    width: 100%; 
+    max-width: 900px;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.02); 
+    border-color: #a30000;
+}
+
+.card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 30px;
+    color: #a30000;
+}
+
+.card p {
+    margin: 0 15px 20px 15px;
+    font-size: 23px;
+    color: #333;
+}
+
+.footer {
+    background: #0055ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* 1. TABLET/MID-SIZE SCREENS (max-width: 768px) */
+@media (max-width: 768px) {
+    
+    /* Navbar Scaling */
+    #site-title a {
+        font-size: 1.7rem; 
+    }
+
+    #site-logo {
+        width: 70px; 
+    }
+    
+    #visit-title {
+        display: none; 
+    }
+    
+    #visit-section {
+        padding-right: 10px; 
+    }
+
+    /* 💥 FIX: Force the list into a Single Column at 768px */
+    #country-list {
+        max-width: none; 
+        height: auto; 
+        flex-direction: column; /* FORCES VERTICAL STACK */
+        flex-wrap: nowrap;
+        align-items: flex-end; /* Links aligned to the right */
+    }
+    
+    #country-list li {
+        width: 100%; /* Ensures full width for single column */
+        margin: 5px 0;
+        text-align: right;
+    }
+    
+    #country-list a {
+        font-size: 1rem;
+    }
+    
+    /* Card Scaling */
+    .card img {
+        height: 250px; 
+    }
+}
+
+
+/* 2. MOBILE VIEW (max-width: 500px): List Single Column, Navbar Stays Horizontal */
+@media (max-width: 500px) {
+    
+    /* Navbar Scaling */
+    #site-title a {
+        font-size: 1.3rem;
+    }
+
+    #site-logo {
+        width: 55px;
+    }
+    
+    #visit-section {
+        padding-right: 0;
+    }
+
+    /* List is already single column, just scale link text */
+    #country-list li {
+        text-align: right; /* Keep it aligned to the right */
+    }
+    
+    #country-list a {
+        font-size: 0.9rem; 
+    }
+    
+    .card img {
+        height: 180px; 
+    }
+    
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 17px;
+    }
+}
